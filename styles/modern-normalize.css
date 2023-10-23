@@ -1,4 +1,4 @@
-/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
 Document
@@ -15,23 +15,14 @@ Use a better box model (opinionated).
   box-sizing: border-box;
 }
 
-/**
-Use a more readable tab size (opinionated).
-*/
-
 html {
-  -moz-tab-size: 4;
-  tab-size: 4;
-}
-
-/**
-1. Correct the line height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-*/
-
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji';
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  -moz-tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+  tab-size: 4; /* 3 */
 }
 
 /*
@@ -39,22 +30,8 @@ Sections
 ========
 */
 
-/**
-Remove the margin in all browsers.
-*/
-
 body {
-  margin: 0;
-}
-
-/**
-Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-*/
-
-body {
-  font-family: system-ui, -apple-system,
-    /* Firefox supports this but not yet `system-ui` */ 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  margin: 0; /* Remove the margin in all browsers. */
 }
 
 /*
@@ -143,7 +120,7 @@ Tabular data
 
 /**
 1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+2. Correct table border color inheritance in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
 */
 
 table {
@@ -174,12 +151,10 @@ textarea {
 
 /**
 Remove the inheritance of text transform in Edge and Firefox.
-1. Remove the inheritance of text transform in Firefox.
 */
 
 button,
 select {
-  /* 1 */
   text-transform: none;
 }
 
@@ -284,62 +259,4 @@ Add the correct display in Chrome and Safari.
 
 summary {
   display: list-item;
-}
-
-html {
-  /* Declare your font family type in the html selector, then your font-family in the body selector */
-  font-family: Arial, sans-serif;
-
-  /* Make base font-size 100% of browser font-size */
-  font-size: 100%;
-
-  /* Declare your box-sizing here, then inherit the box sizing below in the *, *::before and *::after selector */
-  /* https://css-tricks.com/box-sizing */
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit; /* See line 20 */
-}
-
-body {
-  /* Declare your default font stack here */
-  font-family: Arial, sans-serif;
-
-  /* Better text rendering - font-smoothing has not been officially declared, but can still be useful */
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-img {
-  /* For responsive images that adjust & adapt */
-  /*height: auto;*/
-  /*max-width: 100%;*/
-
-  /* This isn't needed, but as a user, I get frustrated when I highlight text and the image gets highlighted too */
-  user-select: none;
-}
-
-button {
-  color: inherit; /* By default, buttons don't inherit the font colour, this is a useful default to override */
-}
-
-a,
-button {
-  touch-action: manipulation; /* Element doesn't want double-tap on mobile to zoom */
-}
-
-svg {
-  /* Make the SVGs fit the parent container by default */
-  height: 100%;
-  width: 100%;
-
-  /* Optional - make the SVG's fill be the same as the inherited color */
-  fill: currentColor;
-
-  /* Prevent the SVG from altering cursor interaction */
-  pointer-events: none;
 }
