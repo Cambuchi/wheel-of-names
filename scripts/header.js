@@ -7,7 +7,7 @@ const createHeader = () => {
     'Sunday',
     'Monday',
     'Tuesday',
-    'Wednesday',
+    'Hump-day',
     'Thursday',
     'Friday',
     'Saturday',
