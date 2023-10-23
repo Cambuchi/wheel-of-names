@@ -1,0 +1,27 @@
+/*/////////////////*/
+/* CSS FOR FOOTER */
+/*////////////////*/
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  background: #000000;
+  color: #ff4500;
+  font-size: 1rem;
+  height: 3vh;
+  position: sticky;
+  top: 100vh;
+  flex-shrink: 0;
+}
+
+@media only screen and (max-width: 750px) {
+  #footer {
+    font-size: 1rem;
+    height: 7.5vh;
+    position: sticky;
+    top: 100vh;
+    flex-shrink: 0;
+  }
+}
