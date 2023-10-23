@@ -3,7 +3,7 @@ const createFooter = () => {
   const footer = document.createElement('div');
   footer.id = 'footer';
 
-  footer.textContent = 'good luck have fun';
+  footer.textContent = 'Now compliant to NAVEX 2023 updated branding!';
 
   return footer;
 };
