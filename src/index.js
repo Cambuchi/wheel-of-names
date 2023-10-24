@@ -73,7 +73,7 @@ import * as d3 from './scripts/d3.v3.min';
     {
       label: 'George',
       value: 8,
-      question: 'Congrats on your recent promotion!',
+      question: 'King of the NE Jungle. Watch out for that JIRA!',
     },
     {
       label: 'Ryan',

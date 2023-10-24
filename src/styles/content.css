@@ -21,10 +21,10 @@
 }
 
 #content {
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: flex;
   flex-direction: column;
-  padding: 2vh 10vh;
+  padding: 2vh 5vh;
   font-family: 'Barlow-Light', sans-serif;
   width: fit-content;
   max-width: 1280px;
@@ -36,8 +36,8 @@
   justify-content: center;
   flex-grow: 0;
   background: #000000;
-  padding: 25px;
-  margin: 5px 0px 20px 0px;
+  padding: 15px;
+  margin: 5px 0px 10px 0px;
   color: #ffffff;
   border: 1px solid #000000;
   font-size: 3rem;
