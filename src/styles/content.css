@@ -40,9 +40,9 @@
   margin: 10px 0px 10px 0px;
   color: #ffffff;
   border: 1px solid #000000;
-  font-size: 3rem;
+  font-size: 2.25rem;
   letter-spacing: 0.05em;
-  line-height: 1.75rem;
+  line-height: 1.25rem;
   overflow-wrap: break-word;
   font-family: 'Barlow-Medium', sans-serif;
 }
@@ -54,13 +54,13 @@
   align-items: center;
   flex-grow: 0;
   font-family: 'Barlow-SemiBold', sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: #ffffff;
 }
 
 #question {
   padding-top: 25px;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-family: 'Barlow-Medium', sans-serif;
   font-weight: 100;
   color: #ffffff;
