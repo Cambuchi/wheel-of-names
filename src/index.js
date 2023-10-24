@@ -96,7 +96,7 @@ import * as d3 from './scripts/d3.v3.min';
       question: 'I heard he lives in a panel van.',
     },
     {
-      label: 'Jefferey',
+      label: 'Jeffrey',
       value: 13,
       question:
         'Strong contender to take it all home in the Best Meme-game NAVEX tournament.',
