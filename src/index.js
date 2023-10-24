@@ -13,8 +13,8 @@ import * as d3 from './scripts/d3.v3.min';
   initialize();
 
   var padding = { top: 20, right: 40, bottom: 0, left: 0 },
-    w = 800 - padding.left - padding.right,
-    h = 800 - padding.top - padding.bottom,
+    w = 650 - padding.left - padding.right,
+    h = 650 - padding.top - padding.bottom,
     r = Math.min(w, h) / 2,
     rotation = 0,
     oldrotation = 0,
