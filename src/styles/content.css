@@ -1,0 +1,81 @@
+/*//////////////////*/
+/* CSS FOR CONTENT */
+/*/////////////////*/
+
+@font-face {
+  font-family: 'Barlow-Light';
+  src: url(../assets/fonts/Barlow-Light.ttf) format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barlow-SemiBold';
+  src: url(../assets/fonts//Barlow-SemiBold.ttf) format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barlow-Medium';
+  src: url(../assets/fonts//Barlow-Medium.ttf) format('truetype');
+  font-style: normal;
+}
+
+#content {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 10vh;
+  font-family: 'Barlow-Light', sans-serif;
+  width: fit-content;
+  max-width: 1280px;
+  align-self: center;
+}
+
+#blurb {
+  display: flex;
+  justify-content: center;
+  flex-grow: 0;
+  background: #000000;
+  padding: 25px;
+  margin: 5px 0px 20px 0px;
+  color: #ffffff;
+  border: 1px solid #000000;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  line-height: 1.75rem;
+  overflow-wrap: break-word;
+  font-family: 'Barlow-Medium', sans-serif;
+}
+
+#chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  font-family: 'Barlow-SemiBold', sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+#question {
+  padding-top: 25px;
+  font-size: 2.5rem;
+  font-family: 'Barlow-Medium', sans-serif;
+  font-weight: 100;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+  #content {
+    width: 100vw;
+    padding: 2vh 10px;
+  }
+
+  #blurb {
+    padding: 10px;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+  }
+}
