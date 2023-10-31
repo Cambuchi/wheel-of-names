@@ -280,13 +280,23 @@ const createItemListElement = (item) => {
   return itemListElement;
 };
 
+const addItemContent = (itemData) => {
+  // target item content container
+  const itemList = document.getElementById('itemsContainer');
+
+  // create the item element
+  const item = createItemListElement(itemData);
+
+  // add the item to the item content container
+  itemList.appendChild(item);
+};
+
 const populateItems = (itemList) => {
   const itemList = document.getElementById('itemsContainer');
   itemList.innerHTML = '';
 
   itemList.forEach((item) => {
-    let itemElement = createItemListElement(item);
-    itemList.appendChild(itemElement);
+    addItemContent(item);
   });
 };
 
