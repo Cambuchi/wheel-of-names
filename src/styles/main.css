@@ -16,3 +16,27 @@ body {
   flex-direction: column;
   background: #000000;
 }
+
+#add-items-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+#plus-icon {
+  filter: opacity(50%);
+  height: 16px;
+  margin-right: 10px;
+}
+
+#add-items {
+  background: none;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+}
