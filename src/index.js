@@ -7,6 +7,9 @@ import initialize from './scripts/initialize';
 
 import * as d3 from './scripts/d3';
 
+import TrashIcon from '../images/trash.png';
+import EditIcon from '../images/edit.png';
+
 const drawChart = (data) => {
   document.getElementById('chart').innerHTML = '';
   let padding = { top: 20, right: 40, bottom: 0, left: 0 },
@@ -245,7 +248,47 @@ const addItem = (item, itemList) => {
   }
 };
 
-const populateItems = (itemList) => {};
+const createItemListTrashIcon = () => {
+  const trash = new Image();
+  trash.src = TrashIcon;
+  trash.className = 'item-list-trash';
+  return trash;
+};
+
+const createItemListEditIcon = () => {
+  const edit = new Image();
+  edit.src = EditIcon;
+  edit.className = 'item-list-edit';
+  return edit;
+};
+
+const createItemListElement = (item) => {
+  const itemListElement = document.createElement('li');
+  itemListElement.classList = 'item-list-element';
+
+  const itemName = document.createElement('div');
+  itemName.classList = 'item-list-name';
+  itemName.textContent = item;
+
+  const itemTrash = createItemListTrashIcon();
+  const editIcon = createItemListEditIcon();
+
+  itemListElement.appendChild(itemName);
+  itemListElement.appendChild(editIcon);
+  itemListElement.appendChild(itemTrash);
+
+  return itemListElement;
+};
+
+const populateItems = (itemList) => {
+  const itemList = document.getElementById('itemsContainer');
+  itemList.innerHTML = '';
+
+  itemList.forEach((item) => {
+    let itemElement = createItemListElement(item);
+    itemList.appendChild(itemElement);
+  });
+};
 
 const clearItemList = (itemList) => {};
 
