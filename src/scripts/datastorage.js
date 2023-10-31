@@ -1,23 +1,7 @@
 // module for setting/retrieving data from local storage
 
 // import the default data if no data exists to use as a placeholder
-const defaultData = [
-  'Cam',
-  'Damien',
-  'Magic Mike',
-  'Brad',
-  'Keith',
-  'PJ',
-  '#1 Mike G.',
-  'George',
-  'Ryan',
-  'Best Mike S.',
-  'Ana',
-  'Ben',
-  'Jeffrey',
-  'Simon',
-  'Kyle',
-];
+import defaultData from '../assets/data/users.json';
 
 // set the local storage data to passed in data
 const setLocalStorage = (itemName, data) => {

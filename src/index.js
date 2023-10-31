@@ -4,11 +4,12 @@ import './styles/main.css';
 
 // import modules
 import initialize from './scripts/initialize';
+import * as DataStorage from './scripts/datastorage';
 
 import * as d3 from './scripts/d3';
 
-import TrashIcon from '../images/trash.png';
-import EditIcon from '../images/edit.png';
+import TrashIcon from './assets/images/trash.png';
+import EditIcon from './assets/images/edit.png';
 
 const drawChart = (data) => {
   document.getElementById('chart').innerHTML = '';
@@ -220,23 +221,12 @@ const drawChart = (data) => {
   }
 };
 
-const initialData = [
-  'Cam',
-  'Damien',
-  'Magic Mike',
-  'Brad',
-  'Keith',
-  'PJ',
-  '#1 Mike G.',
-  'George',
-  'Ryan',
-  'Best Mike S.',
-  'Ana',
-  'Ben',
-  'Jeffrey',
-  'Simon',
-  'Kyle',
-];
+const data = DataStorage.retrieveData('data').data;
+
+const load = (data) => {
+  populateItems(data);
+  drawChart(data);
+};
 
 const addItem = (item, itemList) => {
   if (itemList.includes(item)) {
@@ -295,19 +285,14 @@ const populateItems = (itemList) => {
   const itemContainer = document.getElementById('itemsContainer');
   itemContainer.innerHTML = '';
 
-  itemContainer.forEach((item) => {
+  itemList.forEach((item) => {
     addItemContent(item);
   });
 };
 
 const clearItemList = (itemList) => {};
 
-let itemList = [](
-  // IIFE to encapsulate site creation
-  () => {
-    // create the initial page structure
-    initialize();
-
-    drawChart(initialData);
-  },
-)();
+(() => {
+  initialize();
+  load(data);
+})();

@@ -1,17 +1,19 @@
-[
-  "Cam",
-  "Damien",
-  "Magic Mike",
-  "Brad",
-  "Keith",
-  "PJ",
-  "#1 Mike G.",
-  "George",
-  "Ryan",
-  "Best Mike S.",
-  "Ana",
-  "Ben",
-  "Jeffrey",
-  "Simon",
-  "Kyle"
-]
+{
+  "data": [
+    "Cam",
+    "Damien",
+    "Magic Mike",
+    "Brad",
+    "Keith",
+    "PJ",
+    "#1 Mike G.",
+    "George",
+    "Ryan",
+    "Best Mike S.",
+    "Ana",
+    "Ben",
+    "Jeffrey",
+    "Simon",
+    "Kyle"
+  ]
+}
