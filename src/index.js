@@ -292,10 +292,10 @@ const addItemContent = (itemData) => {
 };
 
 const populateItems = (itemList) => {
-  const itemList = document.getElementById('itemsContainer');
-  itemList.innerHTML = '';
+  const itemContainer = document.getElementById('itemsContainer');
+  itemContainer.innerHTML = '';
 
-  itemList.forEach((item) => {
+  itemContainer.forEach((item) => {
     addItemContent(item);
   });
 };
