@@ -50,7 +50,7 @@ const retrieveData = (itemName) => {
     // if local storage is available, but empty, set default as data
     if (!cachedData) {
       setLocalStorage(itemName, defaultData.data);
-      return defaultData;
+      return defaultData.data;
       // if local storage exists, return that as the data
     }
     const stored = retrieveLocalStorage(itemName);
@@ -58,7 +58,7 @@ const retrieveData = (itemName) => {
 
     // if no local storage available, just set data to be the default
   }
-  return defaultData;
+  return defaultData.data;
 };
 
 export { retrieveData, setLocalStorage };
