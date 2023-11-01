@@ -150,7 +150,7 @@ const drawChart = (data) => {
           '.slice:nth-child(' + (picked + 1) + ') text',
         )[0][0]['textContent'];
         d3.selectAll('#blurb')[0][0]['textContent'] =
-          "It's your turn " + currentName;
+          'And the winner is... ' + currentName + '!';
         //populate question
         // d3.select('#question').text(data[picked].question);
         oldrotation = rotation;
