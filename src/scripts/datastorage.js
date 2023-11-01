@@ -49,7 +49,7 @@ const retrieveData = (itemName) => {
   if (storageAvailable('localStorage')) {
     // if local storage is available, but empty, set default as data
     if (!cachedData) {
-      setLocalStorage(itemName, defaultData);
+      setLocalStorage(itemName, defaultData.data);
       return defaultData;
       // if local storage exists, return that as the data
     }

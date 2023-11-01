@@ -221,9 +221,8 @@ const drawChart = (data) => {
   }
 };
 
-const data = DataStorage.retrieveData('data');
-
-const load = (data) => {
+const load = () => {
+  let data = DataStorage.retrieveData('data');
   populateItems(data);
   drawChart(data);
 };
@@ -234,8 +233,16 @@ const addItem = (item, itemList) => {
     return;
   } else {
     itemList.push(item);
-    populateItems(itemList);
+    DataStorage.setLocalStorage('data', itemList);
+    load();
+    createListeners();
   }
+};
+
+const deleteItem = (item, itemList) => {
+  const index = itemList.indexOf(item);
+  const newList = itemList.splice(index, 1);
+  return newList;
 };
 
 const createItemListTrashIcon = () => {
@@ -290,9 +297,62 @@ const populateItems = (itemList) => {
   });
 };
 
+const createAddItemsListener = () => {
+  const inputElement = document.getElementById('add-items');
+  inputElement.addEventListener(
+    'keyup',
+    (event) => {
+      if (event.code === 'Enter') {
+        const newItem = inputElement.value;
+        const data = DataStorage.retrieveData('data');
+        addItem(newItem, data);
+        inputElement.value = '';
+      }
+      event.stopPropagation();
+    },
+    false,
+  );
+  const inputIconElement = document.getElementById('plus-icon');
+  inputIconElement.addEventListener(
+    'click',
+    (event) => {
+      if (event.target.id === 'plus-icon') {
+        const newItem = inputElement.value;
+        const data = DataStorage.retrieveData('data');
+        addItem(newItem, data);
+        inputElement.value = '';
+      }
+      event.stopPropagation();
+    },
+    false,
+  );
+};
+
+const createListeners = () => {
+  // retrieve the data
+  const data = DataStorage.retrieveData('data');
+  document.body.addEventListener(
+    'click',
+    (event) => {
+      if (event.target !== event.currentTarget) {
+        if (event.target.classList.contains('item-list-trash')) {
+          const itemName = event.target.parentNode.firstChild.textContent;
+          let newData = deleteItem(itemName, data);
+          DataStorage.setLocalStorage('data', data);
+          load();
+        }
+      }
+      event.stopPropagation();
+    },
+    false,
+  );
+};
+
 const clearItemList = (itemList) => {};
 
 (() => {
   initialize();
-  load(data);
+  load();
+  createListeners();
+  createAddItemsListener();
 })();

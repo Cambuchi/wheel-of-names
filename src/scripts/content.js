@@ -10,7 +10,7 @@ const createContent = () => {
   // create the blurb
   const blurb = document.createElement('div');
   blurb.id = 'blurb';
-  blurb.textContent = 'TODO: add/remove people';
+  blurb.textContent = '';
 
   const chart = document.createElement('div');
   chart.id = 'chart';
