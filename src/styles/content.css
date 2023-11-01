@@ -21,14 +21,26 @@
 }
 
 #content {
-  margin-top: 10vh;
   display: flex;
   flex-direction: column;
-  padding: 2vh 5vh;
+  align-items: center;
+  font-family: 'Barlow-Light', sans-serif;
+  justify-content: space-evenly;
+}
+
+#graphic {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-family: 'Barlow-Light', sans-serif;
   width: fit-content;
-  max-width: 1280px;
-  align-self: center;
+  justify-content: space-evenly;
+}
+
+#information {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
 }
 
 #blurb {

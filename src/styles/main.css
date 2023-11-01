@@ -47,9 +47,10 @@ body {
   align-items: stretch;
   background: #404040;
   border: 1px solid #ddd;
-  margin-bottom: 12px;
-  padding: 10px 10px;
+  margin-bottom: 5px;
+  padding: 5px 5px 0px 5px;
   border-radius: 5px;
+  flex-grow: 1;
 }
 
 .item-list-element {
@@ -58,8 +59,8 @@ body {
   align-items: center;
   background: #f8f8f8;
   border: 1px solid #ddd;
-  margin-bottom: 12px;
-  padding: 10px 10px;
+  margin-bottom: 5px;
+  padding: 5px 5px;
   border-radius: 5px;
 }
 

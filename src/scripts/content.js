@@ -10,7 +10,7 @@ const createContent = () => {
   // create the blurb
   const blurb = document.createElement('div');
   blurb.id = 'blurb';
-  blurb.textContent = '';
+  blurb.textContent = 'TODO: custom backgrounds...';
 
   const chart = document.createElement('div');
   chart.id = 'chart';
@@ -39,11 +39,25 @@ const createContent = () => {
 
   itemsContainer.append(items);
 
+  const display = document.createElement('div');
+  display.id = 'display';
+
+  const graphic = document.createElement('div');
+  graphic.id = 'graphic';
+
+  const information = document.createElement('div');
+  information.id = 'information';
+
   // // append all items into the content container
+  display.append(chart);
+  information.append(addItemsBar);
+  information.append(itemsContainer);
+
+  graphic.append(display);
+  graphic.append(information);
+
   content.append(blurb);
-  content.append(chart);
-  content.append(addItemsBar);
-  content.append(itemsContainer);
+  content.append(graphic);
 
   return content;
 };
