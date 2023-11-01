@@ -271,7 +271,7 @@ const createItemListElement = (item) => {
   const editIcon = createItemListEditIcon();
 
   itemListElement.appendChild(itemName);
-  itemListElement.appendChild(editIcon);
+  // itemListElement.appendChild(editIcon);
   itemListElement.appendChild(itemTrash);
 
   return itemListElement;

@@ -31,6 +31,7 @@ body {
   filter: opacity(50%);
   height: 16px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 #add-items {
@@ -76,4 +77,5 @@ body {
 .item-list-trash {
   height: 16px;
   margin-right: 10px;
+  cursor: pointer;
 }
