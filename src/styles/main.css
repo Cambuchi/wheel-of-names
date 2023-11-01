@@ -23,7 +23,7 @@ body {
   align-items: center;
   background: #f8f8f8;
   border: 1px solid #ddd;
-  margin-bottom: 12px;
+  margin: 10px;
   padding: 10px 20px;
   border-radius: 5px;
 }
@@ -39,4 +39,41 @@ body {
   width: 100%;
   font-size: 1rem;
   border: none;
+}
+
+#items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: #404040;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.item-list-element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.item-list-name {
+  flex-grow: 1;
+}
+
+.item-list-edit {
+  filter: opacity(50%);
+  height: 16px;
+  margin-right: 10px;
+}
+
+.item-list-trash {
+  height: 16px;
+  margin-right: 10px;
 }

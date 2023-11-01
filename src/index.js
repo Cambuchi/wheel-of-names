@@ -221,7 +221,7 @@ const drawChart = (data) => {
   }
 };
 
-const data = DataStorage.retrieveData('data').data;
+const data = DataStorage.retrieveData('data');
 
 const load = (data) => {
   populateItems(data);
@@ -272,7 +272,7 @@ const createItemListElement = (item) => {
 
 const addItemContent = (itemData) => {
   // target item content container
-  const itemList = document.getElementById('itemsContainer');
+  const itemList = document.getElementById('items-container');
 
   // create the item element
   const item = createItemListElement(itemData);
@@ -282,7 +282,7 @@ const addItemContent = (itemData) => {
 };
 
 const populateItems = (itemList) => {
-  const itemContainer = document.getElementById('itemsContainer');
+  const itemContainer = document.getElementById('items-container');
   itemContainer.innerHTML = '';
 
   itemList.forEach((item) => {

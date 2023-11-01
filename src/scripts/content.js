@@ -33,7 +33,7 @@ const createContent = () => {
 
   // create the items list
   const itemsContainer = document.createElement('div');
-  itemsContainer.id = 'itemsContainer';
+  itemsContainer.id = 'items-container';
   const items = document.createElement('ul');
   items.id = 'items';
 
